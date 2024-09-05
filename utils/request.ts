@@ -12,11 +12,23 @@ interface FetchOptions {
   keepalive?: boolean; // Keep the request alive for a longer period
   signal?: AbortSignal | null; // Signal object to allow request cancellation
   window?: any; // Not used, should be null
+  params?: any
 }
 
 const fetchApi = async (url: string, options: FetchOptions = {}) => {
+  let fullUrl = url
+  if(options.params && Object.keys(options.params).length) {
+    const queryString = new URLSearchParams(options.params).toString();
+    fullUrl = `${url}?${queryString}`;
+  }
   try {
-    const res = await fetch(url, options)
+    const res = await fetch(fullUrl, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(options.body),
+      ...options
+    })
     if (!res.ok) {
       return Promise.reject(res)
     }
