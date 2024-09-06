@@ -1,5 +1,4 @@
-/* eslint-disable no-console */
-import Test from "@/components/Test";
+import Test from "@/components/page/Test";
 
 export default async function Home() {
   return (
