@@ -3,11 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import StoreProvide from "@/provides/StoreProvide";
+import HeaderApp from "@/components/Header";
+import FooterApp from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const APP_NAME = "PWA App";
-const APP_DEFAULT_TITLE = "My Awesome PWA App";
+const APP_DEFAULT_TITLE = "Wallet Name";
 const APP_TITLE_TEMPLATE = "%s - PWA App";
 const APP_DESCRIPTION = "Best PWA app in the world!";
 
@@ -61,7 +63,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <StoreProvide>
           <AntdRegistry>
+            <HeaderApp />
+
             {children}
+            <FooterApp />
           </AntdRegistry>
         </StoreProvide>
       </body>

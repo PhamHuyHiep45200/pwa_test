@@ -1,18 +1,20 @@
 /* eslint-disable no-console */
-import Test from "@/components/Test";
-import { getData } from "@/requests/test";
+
+import { Noto_Sans_JP, Barlow } from "@next/font/google";
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export default async function Home() {
-  try {
-    const res = await getData()
-    console.log("res", res);
-
-  } catch (error) {
-    console.log("error", error);
-  }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Test />
-    </main>
+    <main
+      className={`flex min-h-screen flex-col items-center justify-between p-20  ${notoSansJP.className} ${barlow.className}`}
+    ></main>
   );
 }
