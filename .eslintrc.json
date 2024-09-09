@@ -1,13 +1,46 @@
 {
-  "extends": "next/core-web-vitals",
+  "parser": "@typescript-eslint/parser", // Chỉ định parser của TypeScript
+  "plugins": [
+    "@typescript-eslint"
+  ], // Dùng plugin TypeScript
+  "extends": [
+    "eslint:recommended", // Quy tắc mặc định của ESLint
+    "plugin:@typescript-eslint/recommended", // Quy tắc khuyến nghị từ TypeScript
+    "next/core-web-vitals"
+  ],
   "rules": {
-    "max-len": ["error", {"code": 200, "ignoreUrls": true}],
-    "curly": ["error", "all"],
-    "no-confusing-arrow": ["error", { "allowParens": false }],
+    "max-len": [
+      "error",
+      {
+        "code": 200,
+        "ignoreUrls": true
+      }
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "no-confusing-arrow": [
+      "error",
+      {
+        "allowParens": false
+      }
+    ],
     "no-mixed-operators": "error",
-    "no-tabs": ["error", {"allowIndentationTabs": true}],
+    "no-tabs": [
+      "error",
+      {
+        "allowIndentationTabs": true
+      }
+    ],
     "no-console": "error",
-    "max-lines": ["error", 250],
-    "no-unused-vars": ["error"]
+    "max-lines": [
+      "error",
+      250
+    ],
+    "no-unused-vars": [
+      "error"
+    ],
+    "@typescript-eslint/no-explicit-any": "error"
   }
 }

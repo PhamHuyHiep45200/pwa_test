@@ -1,7 +1,7 @@
 interface FetchOptions {
   method?: "GET" | "POST" | "PUT" | "PATCH" | "DELETE"; // HTTP method: 'GET', 'POST', 'PUT', etc.
   headers?: HeadersInit; // Headers object, e.g., {'Content-Type': 'application/json'}
-  body?: BodyInit | null; // Request body: string, FormData, Blob, etc.
+  data?: any | null; // Request body: string, FormData, Blob, etc.
   mode?: RequestMode; // 'cors', 'no-cors', 'same-origin'
   credentials?: RequestCredentials; // 'omit', 'same-origin', 'include'
   cache?: RequestCache; // 'default', 'no-store', 'reload', 'no-cache', 'force-cache', 'only-if-cached'
@@ -26,8 +26,8 @@ const fetchApi = async (url: string, options: FetchOptions = {}) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(options.body),
-      ...options
+      ...options,
+      body: JSON.stringify(options.data),
     })
     if (!res.ok) {
       return Promise.reject(res)

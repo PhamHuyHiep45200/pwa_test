@@ -10,3 +10,15 @@ export const getData = async () => {
   }
 
 }
+
+export const postData = async (data: any) => {
+  try {
+    return await request("http://localhost:5000/post", {
+      method: "POST",
+      data
+    })
+  } catch (error) {
+    return Promise.reject(error)
+  }
+
+}
