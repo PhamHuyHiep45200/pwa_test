@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 "use client";
-import { Carousel } from "antd";
+import { Button, Carousel } from "antd";
 import React from "react";
 
 const Intro = () => {
@@ -8,11 +8,8 @@ const Intro = () => {
     console.log(currentSlide);
   };
   const contentStyle: React.CSSProperties = {
-    // margin: 0,
     height: "476px",
     width: "304px",
-    color: "#000000",
-    lineHeight: "160px",
     textAlign: "center",
     alignContent: "center",
     background: "#EEF6F1",
@@ -21,21 +18,24 @@ const Intro = () => {
   return (
     <div className="flex flex-col items-center ">
       <div className="text-center font-bold mt-[19px]">Name Wallet</div>
-      <div style={contentStyle} className="mt-[171px]">
+      <div style={contentStyle} className="mt-[171px] font-barlow">
         <Carousel afterChange={onChange}>
-          <div className="font-barlow text-xs justify-center">
-            <h3>（アニメーションを想定）</h3>
+          <div className="text-xl3 text-gray">
+            <h3 style={contentStyle}> Title 1</h3>
           </div>
-          <div>
-            <h3>（アニメーションを想定）</h3>
+          <div className="text-xl3 text-gray">
+            <h3 style={contentStyle}> Title 2</h3>
           </div>
-          <div>
-            <h3>（アニメーションを想定）</h3>
+          <div className="text-xl3 !text-gray">
+            <h3 style={contentStyle}> Title 3</h3>
           </div>
-          <div>
-            <h3>（アニメーションを想定）</h3>
+          <div className="text-xl3 text-gray">
+            <h3 style={contentStyle}> Title 4</h3>
           </div>
         </Carousel>
+      </div>
+      <div>
+        <Button>はじめる</Button>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import StoreProvide from "@/provides/StoreProvide";
 import HeaderApp from "@/components/Header";
 import FooterApp from "@/components/Footer";
+// import IntroPage from "./Intro/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,7 +65,7 @@ export default function RootLayout({
         <StoreProvide>
           <AntdRegistry>
             <HeaderApp />
-
+            {/* <IntroPage /> */}
             {children}
             <FooterApp />
           </AntdRegistry>
