@@ -1,4 +1,6 @@
-export const tailwindConfig = {
+import { CustomThemeConfig } from "tailwindcss/types/config";
+
+export const tailwindConfig: Partial<CustomThemeConfig> = {
   colors: {
     white: "#FFFFFF",
     shinyBlack: "#000000",
@@ -32,15 +34,12 @@ export const tailwindConfig = {
     md: ["0.82375rem", "1.3175rem"], //["13.18px", "21.08px"]
     md2: ["0.8125rem", "1.3rem"], //["13px", "20.8px"]
     wl: ["0.875rem", "1.4rem"], //["14px", "22.4px"]
-    lg: ["0.875rem"], //["14px"]
     lg2: ["0.916rem", "1.466rem"], //["14.66px", "23.46px"]
     lg3: ["0.938rem", "1.5rem"], //["15px", "24px"]
     xl: ["1rem", "1.6rem"], //["16px", "25.6px"]
-    xl2: ["1.125rem"], //["18px"]
     xl2xxs: ["1.125rem", "1.8rem"], //["18px", ["28.8px"]]
     xl2xs: ["1.125rem", "1.6rem"], //["18px", "25.6px"]
     xl2x: ["1.25rem", "1.6rem"], //["20px", "25.6px"]
-    xl2s: ["1.25rem"], //["20px"]
     xl3sm: ["1.375rem", "1.6rem"],
     xl3: ["1.5rem", "1.65rem"], //["24px", "26.4px"]
     xl4: ["1.75rem", "1.6rem"], //["28px", "25.6px"]
@@ -50,9 +49,6 @@ export const tailwindConfig = {
   },
   fontFamily: {
     barlow: ["Barlow", "sans-serif"],
-  },
-  fontWeight: {
-    350: 350,
   },
   padding: {
     2.75: "0.6875rem", //'11px',

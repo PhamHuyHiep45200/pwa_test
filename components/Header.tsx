@@ -4,7 +4,7 @@ import React from "react";
 
 const HeaderApp = () => {
   return (
-    <div className="flex justify-between p-4">
+    <div className="flex justify-between items-center p-4 py-5 fixed top-0 left-0 right-0">
       <div className="font-bold text-base">Wallet Name</div>
       <div className="flex items-center">
         <div className="ml-4">
