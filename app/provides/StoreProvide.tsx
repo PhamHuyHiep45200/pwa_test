@@ -1,6 +1,6 @@
 "use client"
-import { ProvideChildrenType } from '@/models/Provide'
-import { store } from '@/store/store'
+import { ProvideChildrenType } from '@/app/models/Provide'
+import { store } from '@/app/store/store'
 import React from 'react'
 import { Provider } from 'react-redux'
 

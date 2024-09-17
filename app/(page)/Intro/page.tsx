@@ -1,4 +1,4 @@
-import Intro from "@/components/auth/Intro";
+import Intro from "@/app/components/auth/Intro";
 import React from "react";
 
 const IntroPage = () => {

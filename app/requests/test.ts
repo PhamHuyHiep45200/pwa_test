@@ -1,4 +1,4 @@
-import request from "@/utils/request";
+import request from "@/app/utils/request";
 
 export const getData = async () => {
   try {
@@ -11,6 +11,7 @@ export const getData = async () => {
 
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const postData = async (data: any) => {
   try {
     return await request("http://localhost:5000/post", {

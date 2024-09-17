@@ -1,4 +1,4 @@
-import { navbarItem } from "@/ts/configs/navbar";
+import { navbarItem } from "@/app/ts/configs/navbar";
 import React from "react";
 
 const FooterApp = () => {

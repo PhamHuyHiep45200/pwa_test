@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 interface FetchOptions {
   method?: "GET" | "POST" | "PUT" | "PATCH" | "DELETE"; // HTTP method: 'GET', 'POST', 'PUT', etc.
   headers?: HeadersInit; // Headers object, e.g., {'Content-Type': 'application/json'}

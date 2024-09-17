@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
-import StoreProvide from "@/provides/StoreProvide";
-import HeaderApp from "@/components/Header";
-import FooterApp from "@/components/Footer";
+import StoreProvide from "@/app/provides/StoreProvide";
+import HeaderApp from "@/app/components/Header";
+import FooterApp from "@/app/components/Footer";
 // import IntroPage from "./Intro/page";
 
 const inter = Inter({ subsets: ["latin"] });

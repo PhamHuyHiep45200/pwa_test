@@ -1,4 +1,4 @@
-import { ButtonBaseType } from '@/models/base-components'
+import { ButtonBaseType } from '@/app/models/base-components'
 import { Button } from 'antd'
 import React, { forwardRef } from 'react'
 

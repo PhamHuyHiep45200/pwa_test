@@ -5,6 +5,6 @@ export interface ButtonBaseType extends ButtonProps {
 }
 
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface InputBaseType extends InputProps {
-  
 }

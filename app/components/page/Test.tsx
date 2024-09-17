@@ -1,6 +1,6 @@
 "use client"
-import { decrement, increment } from "@/store/counter/counterSlice";
-import { RootState } from "@/store/store";
+import { decrement, increment } from "@/app/store/counter/counterSlice";
+import { RootState } from "@/app/store/store";
 import { Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import style from "@/styles/test.module.scss"

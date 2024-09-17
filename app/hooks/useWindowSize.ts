@@ -1,4 +1,4 @@
-import { SizeWindowType } from "@/models/hooks";
+import { SizeWindowType } from "@/app/models/hooks";
 import { useEffect, useState } from "react";
 
 // when resize screen return width height screen device 

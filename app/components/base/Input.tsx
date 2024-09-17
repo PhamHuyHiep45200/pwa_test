@@ -1,4 +1,4 @@
-import { InputBaseType } from '@/models/base-components'
+import { InputBaseType } from '@/app/models/base-components'
 import { Input, InputRef } from 'antd'
 import React, { forwardRef } from 'react'
 
